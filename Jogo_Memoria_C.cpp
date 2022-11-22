@@ -9,7 +9,7 @@
 // Joel Adelaide Medeiros - RGM: 29799384
 // Marcos Barbosa Vieira Filho - RGM: 30174503
 // Maria Helena de Medeiros Silva - RGM: 30227151
-
+// Sidnei Marcos- RGM: 29818591
 
 //Inclusão de bibliotecas utilizadas no desenvolvimento do jogo
 #include<stdio.h> 
@@ -63,7 +63,9 @@ void printInicial(){
 	Sleep(1500);
 	printf("\t\t\tMarcos Barbosa Vieira Filho - RGM: 30174503\n");
 	Sleep(1500);
-	printf("\t\t\tMaria Helena de Medeiros Silva - RGM: 30227151\n\n\n");
+	printf("\t\t\tMaria Helena de Medeiros Silva - RGM: 30227151\n");
+	Sleep(1500);
+	printf("\t\t\tSidnei Marcos- RGM: 29818591\n\n\n");
 	Sleep(1500);
 	system("cls");
 
@@ -151,9 +153,9 @@ void printFinal(struct placar _placar){
 	
 	printf("-*-*-*-*-*-*-*-*-*-*  FINAL DO JOGO  -*-*-*-*-*-*-*-*-*-*\n");
 	if(_placar.placarJogador1 > _placar.placarJogador2){
-		printf("-*-*-*-*-*-*-*-*-*  JOGADOR 1 VENCEU!  -*-*-*-*-*-*-*-*-*\n");
+		printf("-*-*-*-*-*-*-*-*-* JOGADOR 1 VENCEU!  -*-*-*-*-*-*-*-*-*\n");
 		//dados a salvar caso o ganhador sejá o jogador 1
-		fprintf(salvar, "\njogaodor 1- %d        \n",_placar.placarJogador1);
+		fprintf(salvar, "\n %s- %d        \n",_placar.nomeJogador1,_placar.placarJogador1);
 		//fecha arquivo
 		fclose(salvar);
 		printf("Adicionado ao ranking");
@@ -161,7 +163,7 @@ void printFinal(struct placar _placar){
 	else if(_placar.placarJogador2 > _placar.placarJogador1){
 		printf("-*-*-*-*-*-*-*-*-*  JOGADOR 2 VENCEU!  -*-*-*-*-*-*-*-*-*\n");
 		//dados a salvar caso o ganhador sejá o jogador 2
-		fprintf(salvar, "\njogaodor 2- %d        \n",_placar.placarJogador1);
+		fprintf(salvar, "\n %s- %d        \n",_placar.nomeJogador2,_placar.placarJogador2);
 		//fecha arquivo
 		fclose(salvar);
 		printf("Adicionado ao ranking");
@@ -359,7 +361,7 @@ int main(){
 			
 			//getch();
 	    	
-	    	
+	    
 		
 		}
 		else if(op==3){
