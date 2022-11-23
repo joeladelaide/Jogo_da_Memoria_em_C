@@ -337,6 +337,7 @@ int main(){
 	    }
 	    else if(op==2){
 	    	
+	    	system("cls");
 	    	
 	    	//exibir ranking
 	    	printf("Ranking\n");
