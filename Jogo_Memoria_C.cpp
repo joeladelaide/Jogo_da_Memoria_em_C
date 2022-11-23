@@ -175,9 +175,10 @@ void printFinal(struct placar _placar){
 
 void embaralharMatriz(){
 	
-		int i,j,r,y,temp;
+	int i,j,r,y,temp;
 	    
-	    for ( i = 0; i < 4; i++ ) {
+	//Embaralha a matriz de forma aleatória
+	for ( i = 0; i < 4; i++ ) {
          for ( j = 0; j < 4; j++ ) {
               r = rand ( ) % 4;
               y = rand ( ) % 4;
@@ -187,6 +188,7 @@ void embaralharMatriz(){
          }
      }
      
+     // reseta matriz j2
     for ( i = 0; i < 4; i++ ) {
          for ( j = 0; j < 4; j++ ) {
          	
